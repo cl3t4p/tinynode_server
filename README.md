@@ -74,7 +74,7 @@ services:
     environment:
       - SERVER_ADDRESS=0.0.0.0:9006
       - API_TOKEN=*****
-      - MQTT_HOST=10.100.0.1
+      - MQTT_HOST=10.0.0.1
       - MQTT_PORT=1883
       - MQTT_USER=rust_api
       - MQTT_PASS=*****
