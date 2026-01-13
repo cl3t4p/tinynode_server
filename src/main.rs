@@ -8,7 +8,6 @@ use axum::{
 use rumqttc::{AsyncClient, EventLoop, MqttOptions, QoS};
 use serde::Deserialize;
 use std::{net::SocketAddr, sync::Arc, time::Duration};
-use axum::routing::get;
 use tracing::{error, info};
 
 
