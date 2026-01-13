@@ -28,6 +28,50 @@ MQTT_PASS=supersecret
 
 ---
 
+## Installation (Cargo)
+
+### Prerequisites
+
+- Rust toolchain (stable)
+- Cargo
+- An MQTT broker (e.g. Mosquitto) reachable from the server
+
+### Build
+
+```bash
+cargo build --release
+```
+
+### Run
+
+Option A: export variables in the shell:
+
+```bash
+export SERVER_ADDRESS=0.0.0.0:7538
+export API_TOKEN=secret_token
+export MQTT_HOST=127.0.0.1
+export MQTT_PORT=1883
+export MQTT_USER=rust_api
+export MQTT_PASS=supersecret
+
+./target/release/tinynode
+```
+
+Option B: use `.env` (recommended)
+
+If you use a `.env` file, load it with your shell or a tool like `direnv`:
+
+```bash
+set -a
+source .env
+set +a
+
+./target/release/tinynode
+```
+
+---
+
+
 ## Installation (Docker)
 
 The server is published on Docker Hub:
